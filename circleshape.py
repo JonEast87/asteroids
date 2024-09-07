@@ -22,3 +22,7 @@ class CircleShape(pygame.sprite.Sprite):
 		# Checks for collisions by passing player object here, it still detects hits despite grazing the physical object, not sure how to correct it
 		if self.position.distance_to(player.position) <= self.radius + player.radius:
 			return True
+
+	def hit_with(self, shot):
+		if self.position.distance_to(shot.position) <= self.radius + shot.radius:
+			return True
