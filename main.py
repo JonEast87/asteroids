@@ -19,7 +19,8 @@ def main():
 	drawable = pygame.sprite.Group()
 	asteroids = pygame.sprite.Group()
 	shots = pygame.sprite.Group()
-
+	
+	# This creates a list of objects that are later used to iterate through
 	Asteroid.containers = (asteroids, updatable, drawable)
 	AsteroidField.containers = updatable
 	asteroidField = AsteroidField()
