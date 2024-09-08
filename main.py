@@ -48,8 +48,8 @@ def main():
 
 			for shot in shots:
 				if asteroid.hit_with(shot):
-					pygame.sprite.Sprite.kill(asteroid)
-					pygame.sprite.Sprite.kill(shot)
+					shot.kill()
+					asteroid.split()
 
 		screen.fill("black")
 		
